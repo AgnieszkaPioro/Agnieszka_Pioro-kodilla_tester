@@ -2,7 +2,7 @@ public class MainExtended {
     public static void main(String[] args) {
         String name = "Euro2020";
         int countries = 24;
-        double cities = 11;
+        int cities = 11;
         char polandGroup = 'E';
         boolean isPolandWinEuro = false;
         boolean isSpainWinEuro = true;
