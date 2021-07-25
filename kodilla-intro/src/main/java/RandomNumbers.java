@@ -1,6 +1,6 @@
 public class RandomNumbers {
 
-    public int getCountOfRandomNumber(int 5000) {
+    public int getCountOfRandomNumber(int 0) {
         RandomNumbers random = new RandomNumbers();
         int result = 0;
         int sum = 0;
