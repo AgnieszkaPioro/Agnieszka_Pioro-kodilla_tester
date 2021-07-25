@@ -7,11 +7,6 @@ public class User {
         this.age = age;
     }
 
-    public int getAge() { //getter
-        return age;
-    }
-
-
     public static void main(String[] args) {
 
         User user1 = new User("Adam", 25);
@@ -21,24 +16,25 @@ public class User {
 
         User[] users = {user1, user2, user3, user4};
 
-        // suma i średnia wieku z tablicy, jak brać wartość pola "wiek"
+        double result = 0;
+        for (int i =0; i < users.length; i++) {
+            result = result + users[i].age;
+        }
+        result = result / users.length;
+        System.out.println("Srednia wieku to " + result);
 
-        int wiek1 = 25;
-        int wiek2 = 34;
-        int wiek3 = 29;
-        int wiek4 = 18;
-        int suma = wiek1 + wiek2 + wiek3 + wiek4;
-        System.out.println(suma);
+
+        for (int i = 0; i < users.length; i++) {
+            if (users[i].age < result);
+        }
+        System.out.println(users[i].name < result); // Wyświetlanie imion, których wiek jest poniżej średniej ???
+
 
         int numberOfElements = users.length;
-        System.out.println(numberOfElements);
 
-        double sredniaWieku = suma / numberOfElements;
-        System.out.println(sredniaWieku);
     }
 }
 
-// Wyświetlanie imion, których wiek jest poniżej średniej ???
 
 
 
