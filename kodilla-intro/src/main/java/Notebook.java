@@ -11,7 +11,7 @@ public class Notebook {
     public void checkPrice() {
         if (this.price < 600) {
             System.out.println("This notebook is very cheap.");
-        } else if (this.price > 600 && this.price <= 1000){
+       } else if (this.price >= 600 && this.price <= 1000){
             System.out.println("The price is good.");
         } else {
             System.out.println("This notebook is expensive.");
@@ -20,7 +20,7 @@ public class Notebook {
     public void checkWeight() {
         if (this.weight < 700 ) {
             System.out.println("This notebook is light.");
-        } else if (this.weight > 700 && this.weight <= 1500) {
+        } else if (this.weight >= 700 && this.weight <= 1500) {
             System.out.println("This notebook is not so heavy. ");
         } else {
             System.out.println("This notebook is very heavy.");
@@ -33,5 +33,4 @@ public class Notebook {
             System.out.println("This notebook is not worth the money.");
         }
     }
-
 }
