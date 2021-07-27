@@ -21,5 +21,6 @@ public class Person {
         Person adam = new Person("Adam", 40.5,178);
         System.out.println(adam.name + " " + adam.age + " " + adam.height);
         adam.checkApplication();
+
     }
 }
