@@ -1,9 +1,9 @@
-public class Application {
+public class Person {
     String name;
     double age;
     double height;
 
-    public Application(String name, double age, double height) {
+    public Person(String name, double age, double height) {
 
     this.name = name;
     this.age = age;
@@ -18,7 +18,7 @@ public class Application {
         }
     }
     public static void main(String[] args) {
-        Application adam = new Application("Adam", 40.5,178);
+        Person adam = new Person("Adam", 40.5,178);
         System.out.println(adam.name + " " + adam.age + " " + adam.height);
         adam.checkApplication();
     }
