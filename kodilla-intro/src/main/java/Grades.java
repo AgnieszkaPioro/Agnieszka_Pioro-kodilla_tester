@@ -16,20 +16,19 @@ public class Grades {       // klasa grades
         this.size++; // dodanie elementu do tablicy jeśli rozmiar mniejszy od 10
 
     }
-    public void lastGrade() { //wyciąganie ostatniej dodanej oceny
+    public int lastGrade() { //wyciąganie ostatniej dodanej oceny
 
-        System.out.println("Ostatnia dodana ocena to " + grades[this.size - 1]);
-        }
-    public void averageGrades() { //obliczanie średniej arytmetycznej ocen w tablicy
+        int lastGradeReturn = grades[this.size - 1];
+        return lastGradeReturn;
+    }
+    public double averageGrades() { //obliczanie średniej arytmetycznej ocen w tablicy
 
-        System.out.println("Zawartość tablicy to " + Arrays.toString(grades));
         double sum = 0;
         for (int i : grades) {
             sum += i;
         }
-        System.out.println("Suma ocen wynosi " + sum);
         double result = sum / this.size;
-        System.out.println("Srednia wszystkich ocen wynosi " + result);
+        return result;
         }
 
     public static void main(String[] args) { //dodanie ocen do tablicy
@@ -45,9 +44,8 @@ public class Grades {       // klasa grades
         grades1.add(3);
         grades1.add(6);
 
-        grades1.lastGrade();
-
-        grades1.averageGrades();
+        System.out.println("Srednia ocen to " + grades1.averageGrades());
+        System.out.println("Ostatnia dodana ocena to " + grades1.lastGrade());
     }
 }
 
