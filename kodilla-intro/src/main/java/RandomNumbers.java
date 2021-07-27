@@ -8,7 +8,7 @@ public class RandomNumbers {
         while (sum < 5000) {
             int a = random.nextInt(31); // losowanie liczby z zakresu [0,30] do zmiennej a
             if (a > max) max = a;
-            if (a > min) min = a;
+            if (a < min) min = a;
             sum = sum + a;
         }
 

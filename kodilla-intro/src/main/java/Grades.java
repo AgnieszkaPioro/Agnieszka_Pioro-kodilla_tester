@@ -20,7 +20,6 @@ public class Grades {       // klasa grades
 
         System.out.println("Ostatnia dodana ocena to " + grades[this.size - 1]);
         }
-        
     public void averageGrades() { //obliczanie średniej arytmetycznej ocen w tablicy
 
         System.out.println("Zawartość tablicy to " + Arrays.toString(grades));
