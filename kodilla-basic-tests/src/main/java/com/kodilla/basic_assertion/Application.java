@@ -3,11 +3,13 @@ package com.kodilla.basic_assertion;
 public class Application {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-            int a = 5;
-            int b = 8;
+            double a = 15.4;
+            double b = 15.3;
 
-            int sumResult = calculator.sum(a, b);
-            boolean correct = ResultChecker.assertEquals(13, sumResult);
+
+
+            double sumResult = calculator.sum(a, b);
+            boolean correct = ResultChecker.assertEquals(30.7, sumResult, 0.2);
             if (correct) {
                 System.out.println("Metoda sum działa poprawnie dla liczb " + a + " i " + b);
             }
@@ -15,8 +17,8 @@ public class Application {
                 System.out.println("Metoda sum nie działa poprawnie dla liczb " + a + " i " + b);
             }
 
-            int subtractResult = calculator.subtract(a, b);
-            boolean correctSubtract = ResultChecker.assertEquals(-3, subtractResult);
+            double subtractResult = calculator.subtract(a, b);
+            boolean correctSubtract = ResultChecker.assertEquals(0.1, subtractResult, 0.2);
             if (correctSubtract) {
                 System.out.println("Metoda subtract działa poprawnie dla liczb " + a + " i " + b);
             }
@@ -24,8 +26,8 @@ public class Application {
                 System.out.println("Metoda subtract nie działa poprawnie dla liczb " + a + " i " + b);
             }
 
-            int squaredResult = calculator.squared(a);
-            boolean correctSquared = ResultChecker.assertEquals(25, squaredResult);
+            double squaredResult = calculator.squared(a);
+            boolean correctSquared = ResultChecker.assertEquals(237.16, squaredResult, 0.2);
             if (correctSquared) {
             System.out.println("Metoda squared działa poprawnie dla liczby " + a);
             }
