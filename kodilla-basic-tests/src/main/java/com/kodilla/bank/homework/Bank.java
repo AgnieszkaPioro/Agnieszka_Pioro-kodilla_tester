@@ -41,7 +41,7 @@ public class Bank {
         public double getAverageWithdraw () {
             double sum = 0;
             for (int i = 0; i < this.cashMachines.length; i++) {
-                sum += this.cashMachines[i].getAverageValueOfWithdraw();
+                sum += this.cashMachines[i].getSumOfWithdraws();
             }
             return sum/getNumberOfWithdraw();
         }
@@ -49,9 +49,9 @@ public class Bank {
         public double getAverageAdd () {
             double sum = 0;
             for (int i = 0; i < this.cashMachines.length; i++) {
-                sum += this.cashMachines[i].getAverageValueOfAdds();
+                sum += this.cashMachines[i].getSumOfAdds();
             }
-            return sum/getAverageAdd();
+            return sum/getNumberOfAdd();
         }
 
     }

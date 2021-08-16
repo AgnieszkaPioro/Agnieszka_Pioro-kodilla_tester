@@ -34,6 +34,24 @@ public class CashMachine {
         }
         return balance;
     }
+    public double getSumOfAdds() {                          // metoda zwracająca wartość wszystkich wpłat
+        double sumOfAdds = 0;
+        for (int i = 0; i < this.values.length; i++) {
+            if (this.values[i] > 0) {
+                sumOfAdds += this.values[i];
+            }
+        }
+        return sumOfAdds;
+    }
+    public double getSumOfWithdraws() {                          // metoda zwracająca wartość wszystkich wypłat
+        double sumOfWithdraws = 0;
+        for (int i = 0; i < this.values.length; i++) {
+            if (this.values[i] < 0) {
+                sumOfWithdraws += this.values[i];
+            }
+        }
+        return sumOfWithdraws;
+    }
     public int getNumberTransactionsAddMoney() {          //// liczba trans związanych z wpłatą
         int resultNumberOfTransactionsAddMoney = 0;
         for (int i = 0; i < this.values.length; i++) {

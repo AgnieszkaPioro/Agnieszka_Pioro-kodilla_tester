@@ -59,4 +59,23 @@ public class CashMachineTestSuite {
 
         assertEquals(-400, cashMachine.getAverageValueOfWithdraw());
     }
+    @Test
+    public void shouldShowValueOfAdds() {                           //suma wpłat
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.addOrWithdrawMoney(600);
+        cashMachine.addOrWithdrawMoney(800);
+        cashMachine.addOrWithdrawMoney(-400);
+
+        assertEquals(1400, cashMachine.getSumOfAdds());
+    }
+    @Test
+    public void  shouldShowValueOfWithdraws() {                     //suma wypłat
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.addOrWithdrawMoney(600);
+        cashMachine.addOrWithdrawMoney(800);
+        cashMachine.addOrWithdrawMoney(-500);
+
+        assertEquals(-500, cashMachine.getSumOfWithdraws());
+    }
+
 }
