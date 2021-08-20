@@ -1,5 +1,6 @@
 package com.kodilla.collections.lists;
 
+import com.kodilla.collections.interfaces.Shape;
 import com.kodilla.collections.interfaces.Square;
 
 import java.util.ArrayList;
@@ -17,6 +18,11 @@ public class ShapesListApplication {
             Square square = shapes.get(n);
             if (square.getArea() > 20)
                 System.out.println(square + ", area: " + square.getArea());
+        }
+        for (Square square : shapes) {
+            if(square.getArea() > 20)
+                System.out.println(square + ", area: " + square.getArea());
+
         }
     }
 }
