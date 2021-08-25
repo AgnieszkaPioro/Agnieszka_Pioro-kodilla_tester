@@ -14,9 +14,9 @@ public class SchoolDirectory {
         School doloresSchool = new School(29.0, 24.0, 30.0);
         School severusSchool = new School(30.0, 23.0, 25.0);
 
-        Principal albus = new Principal("albus dumbledore", "hogward");
-        Principal dolores = new Principal("dolores umbridge", "oxford");
-        Principal severus = new Principal("severus snape", "cambridge");
+        Principal albus = new Principal("albus", "dumbledore");
+        Principal dolores = new Principal("dolores", "umbridge");
+        Principal severus = new Principal("severus", "snape");
 
         london.put(albusSchool, albus);
         london.put(doloresSchool, dolores);
@@ -24,8 +24,8 @@ public class SchoolDirectory {
 
 
         for (Map.Entry<School, Principal> schoolEntry : london.entrySet())
-            System.out.println(schoolEntry.getValue().getName() +
-                    " , " + schoolEntry.getValue().getSchoolName() + ", number of all students: " +
+            System.out.println(schoolEntry.getValue().getFirstNme() + " " +
+                      schoolEntry.getValue().getLastName() + " " + ", number of all students: " +
                     schoolEntry.getKey().getNumberOfAllStudents());
 
     }
