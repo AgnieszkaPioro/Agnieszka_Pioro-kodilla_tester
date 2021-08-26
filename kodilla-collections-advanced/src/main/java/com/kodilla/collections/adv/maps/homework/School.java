@@ -5,11 +5,17 @@ import java.util.List;
 
 public class School {
 
+    private String schoolName;
 
+
+    public String getSchoolName() {
+        return schoolName;
+    }
 
     private List<Double> school = new ArrayList<>();
 
-    public School(double... school) {
+    public School(String schoolName, double... school) {
+        this.schoolName = schoolName;
         for (double numberOfStudents : school)
             this.school.add(numberOfStudents);
     }

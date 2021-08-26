@@ -6,14 +6,14 @@ public class testy {
 
         int result = 0;
 
-        for (int i = 0; i < 6; i++) {
+
+        for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] % 4 == 0) {
 
                 result = result + numbers[i];
             }
-            System.out.println(result);
-
         }
+        System.out.println(result);
     }
 }
 
