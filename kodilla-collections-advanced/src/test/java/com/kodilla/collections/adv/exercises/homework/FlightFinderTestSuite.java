@@ -11,7 +11,6 @@ class FlightFinderTestSuite {
 
     @Test
     public void testFindFlightsFrom() {
-
         //when
 
         List<Flight> result = FlightFinder.findFlightsFrom("london");
@@ -24,7 +23,6 @@ class FlightFinderTestSuite {
     }
     @Test
     public void  testFindArrival() {
-
         //when
 
         List<Flight> result = FlightFinder.findFlightsTo("monachium");
@@ -32,6 +30,16 @@ class FlightFinderTestSuite {
         //then
         List<Flight> expectedList = new ArrayList<>();
         expectedList.add(new Flight("cracow", "monachium"));
+        expectedList.add(new Flight("barcelona", "monachium"));
         assertEquals(expectedList, result);
+
+
+        //when
+        List<Flight> result2 = FlightFinder.findFlightsTo("sydney");
+
+        //then
+        List<Flight> expectedList2 = new ArrayList<>();
+        assertEquals(expectedList, result);
+
     }
 }

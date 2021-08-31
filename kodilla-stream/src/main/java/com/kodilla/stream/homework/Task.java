@@ -14,6 +14,18 @@ public class Task {
         this.deadline = deadline;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public LocalDate getOpened() {
+        return opened;
+    }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
