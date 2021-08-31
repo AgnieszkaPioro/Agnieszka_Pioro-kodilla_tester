@@ -32,14 +32,5 @@ class FlightFinderTestSuite {
         expectedList.add(new Flight("cracow", "monachium"));
         expectedList.add(new Flight("barcelona", "monachium"));
         assertEquals(expectedList, result);
-
-
-        //when
-        List<Flight> result2 = FlightFinder.findFlightsTo("sydney");
-
-        //then
-        List<Flight> expectedList2 = new ArrayList<>();
-        assertEquals(expectedList, result);
-
     }
 }
