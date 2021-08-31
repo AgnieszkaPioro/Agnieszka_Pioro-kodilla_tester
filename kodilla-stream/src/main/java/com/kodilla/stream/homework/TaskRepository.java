@@ -20,10 +20,12 @@ public class TaskRepository {
         Task task1 = new Task("exercises", currentDate, myDate);    // nazwa zadania, data rozpoczęcia, dealine
         Task task2 = new Task("learningEnglish", currentDate2, myDate2);
         Task task3 = new Task("saveMoney", currentDate, myDate);
+        Task task4 = new Task("readBooks", currentDate, currentDate);
 
         tasks.add(task1);
         tasks.add(task2);
         tasks.add(task3);
+        tasks.add(task4);
 
         return tasks;
     }

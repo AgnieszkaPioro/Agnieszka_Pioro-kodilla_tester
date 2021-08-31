@@ -10,14 +10,15 @@ public class TaskManager {
 
         List<LocalDate> listOfDeadlines = TaskRepository.getTask()
                 .stream()
-                .filter(i -> i.getDeadline().isAfter(LocalDate.of(2021, 8, 31)))
+                .filter(i -> i.getDeadline().isAfter(LocalDate.of(2021, 8, 31)) || i.getDeadline().equals(LocalDate.of(2021, 8, 31)))
                 .map(TaskManager::getDeadline)
                 .collect(Collectors.toList());
-        System.out.println(listOfDeadlines);
+                 System.out.println(listOfDeadlines);
     }
 
     public static LocalDate getDeadline(Task task) {
         return task.getDeadline();
+
     }
 }
 
