@@ -15,6 +15,7 @@ public class TaskManager {
                 .collect(Collectors.toList());
         System.out.println(listOfDeadlines);
     }
+
     public static LocalDate getDeadline(Task task) {
         return task.getDeadline();
     }
