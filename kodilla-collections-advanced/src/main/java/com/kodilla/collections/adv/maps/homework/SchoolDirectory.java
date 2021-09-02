@@ -14,6 +14,7 @@ public class SchoolDirectory {
         School doloresSchool = new School("oxford",29.0, 24.0, 30.0);
         School severusSchool = new School("cambridge",30.0, 23.0, 25.0);
 
+
         Principal albus = new Principal("albus", "dumbledore");
         Principal dolores = new Principal("dolores", "umbridge");
         Principal severus = new Principal("severus", "snape");
