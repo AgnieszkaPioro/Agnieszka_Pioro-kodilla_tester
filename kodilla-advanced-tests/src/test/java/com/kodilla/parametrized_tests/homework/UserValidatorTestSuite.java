@@ -33,7 +33,7 @@ public class UserValidatorTestSuite {
         assertTrue(validator.validateEmail(email));
     }
     @ParameterizedTest
-    @ValueSource(strings = {"lalala.pl", "agnieszka-pioro@@wp.pl", "a bcd@wp.pl", "pszczółka@wp.pl"})
+    @ValueSource(strings = {"lalala.pl", "agnieszkaaa-pioro@@wp.pl", "a bcd@wp.pl", "pszczółka@wp.pl"})
 
     public void shouldReturnFalseIfEmailNotMatches(String email) {
         assertFalse(validator.validateEmail(email));
