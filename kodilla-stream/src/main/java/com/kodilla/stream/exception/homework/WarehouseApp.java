@@ -12,7 +12,7 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("17"));
 
         try {
-            warehouse.getOrder("17");
+            warehouse.getOrder("10");
         } catch (OrderDoesntExistException e) {
             System.out.println("This order doesn't exist");
         }
