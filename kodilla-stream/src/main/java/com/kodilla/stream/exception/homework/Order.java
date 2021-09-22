@@ -2,13 +2,13 @@ package com.kodilla.stream.exception.homework;
 
 public class Order {
 
-    private int number;
+    private String number;
 
-    public Order(int number) {
+    public Order(String number) {
         this.number = number;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 

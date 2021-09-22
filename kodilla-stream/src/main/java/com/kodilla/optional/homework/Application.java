@@ -26,37 +26,9 @@ public class Application {
         students.add(studentPiotr);
 
 
-
-        Optional<Teacher> optionalStudent = Optional.ofNullable(new Teacher(""));
-        Optional<Teacher> optionalStudent2 = Optional.ofNullable(teacherWojtek);
-        Optional<Teacher> optionalStudent3 = Optional.ofNullable(new Teacher(""));
-        Optional<Teacher> optionalStudent4 = Optional.ofNullable(teacherMichal);
-
-
-
-        String name =
-                optionalStudent.orElse(new Teacher("")).getName();
-        String name2 =
-                optionalStudent2.orElse(new Teacher("")).getName();
-        String name3 =
-                optionalStudent3.orElse(new Teacher("")).getName();
-        String name4 =
-                optionalStudent4.orElse(new Teacher("")).getName();
-
-        System.out.println(studentAdam.name + " " + name);
-        System.out.println(studentMarek.name + " " + name2);
-        System.out.println(studentMarek.name + " " + name3);
-        System.out.println(studentMarek.name + " " + name4);
-
-
-        System.out.println("...............................");
-
-
-        for (Student student : students)
-            if (student.getTeacher() == null)
-            System.out.println("Student: " + student.getName() + "  Teacher " + "<undefined>");
-         else {
-            System.out.println("Student: " + student.getName() + "  Teacher " + student.getTeacher().getName());
+        for (Student student : students) {
+            Teacher teacher1 = Optional.ofNullable(student.getTeacher()).orElse(new Teacher("<undefined>"));
+            System.out.println("Student: " + student.getName() + "  Teacher " + teacher1.getName());
         }
     }
 }
