@@ -6,14 +6,13 @@ public class WarehouseApp {
 
         Warehouse warehouse = new Warehouse();
 
-
         warehouse.addOrder(new Order("12"));
         warehouse.addOrder(new Order("13"));
         warehouse.addOrder(new Order("17"));
         warehouse.addOrder(new Order("14"));
 
         try {
-            warehouse.getOrder("10");
+            warehouse.getOrder("12");
         } catch (OrderDoesntExistException e) {
             System.out.println("This order doesn't exist");
         }
