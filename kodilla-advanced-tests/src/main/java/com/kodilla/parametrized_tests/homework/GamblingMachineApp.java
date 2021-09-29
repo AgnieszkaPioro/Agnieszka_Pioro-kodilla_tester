@@ -6,12 +6,24 @@ import java.util.Set;
 public class GamblingMachineApp {
 
     public static void main(String[] args) {
+        Set<Integer> myNumbers = new HashSet<>();
+
+        myNumbers.add(5);
+        myNumbers.add(9);
+        myNumbers.add(25);
+        myNumbers.add(32);
+        myNumbers.add(41);
+        myNumbers.add(44);
+
+
+
+        System.out.println(myNumbers.size());
+
         GamblingMachine gamblingMachine = new GamblingMachine();
-
-        gamblingMachine.howManyWins()
+        try {
+            gamblingMachine.howManyWins(myNumbers);
+        } catch (InvalidNumbersException e) {
+            e.printStackTrace();
+        }
     }
-
-
-
-
 }

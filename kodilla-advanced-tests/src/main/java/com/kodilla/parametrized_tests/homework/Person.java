@@ -38,8 +38,9 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person person = new Person(1.65,55);
+        Person person = new Person(1.85,200);
 
-        System.out.println( person.getBMI());
+        System.out.println(person.getBMI());
+
     }
 }

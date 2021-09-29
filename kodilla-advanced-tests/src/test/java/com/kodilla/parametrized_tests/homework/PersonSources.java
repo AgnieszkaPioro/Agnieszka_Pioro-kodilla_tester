@@ -10,19 +10,14 @@ import java.util.stream.Stream;
 
 public class PersonSources {
 
+    static Stream<Arguments> providePersonForTestingBmi() {
 
-    private static List<Person> persons = new ArrayList<>();
-
-    public static List<Person> prepareListOfPersons() {
-
-        Person person1 = new Person(1.65,65);
-
-        persons.add(new Person(1.65,65));
-        persons.add(new Person(1.85,85));
-        persons.add(new Person(1.55,45));
-        persons.add(new Person(1.95,75));
-        persons.add(new Person(1.85,125));
-
-        return persons;
+        return Stream.of(
+                Arguments.of(new Person(1.65,65), "Normal (healthy weight)"),
+                Arguments.of(new Person(1.85,85), "Normal (healthy weight)"),
+                Arguments.of(new Person(1.55,35), "Very severely underweight"),
+                Arguments.of(new Person(1.95,105), "Overweight"),
+                Arguments.of(new Person(1.85,200), "Obese Class V (Super Obese)")
+        );
     }
 }
