@@ -14,10 +14,15 @@ public class GamblingMachineTestSuite {
 
 
 
-    @ParameterizedTest
-    @CsvFileSource(resources = "/numbersGamblingMachine.csv", numLinesToSkip = 1)
-
-    public void shouldCountWins(Set<Integer> input, int expected) throws InvalidNumbersException {
-        assertEquals(0-6, gamblingMachine.howManyWins(input));
-    }
+//    @ParameterizedTest
+//    @CsvFileSource(resources = "/numbersGamblingMachine.csv", numLinesToSkip = 1)
+//
+//    public void shouldCountWins(String input) throws InvalidNumbersException {
+//        System.out.println(input);
+//        int wins = gamblingMachine.howManyWins(input);
+//        System.out.println(wins);
+//        boolean isWin = false;
+//        if
+//        assertTrue (isWin);
+//    }
 }

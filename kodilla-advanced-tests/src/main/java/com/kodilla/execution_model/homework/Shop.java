@@ -7,22 +7,77 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
 public class Shop {
 
-    private List<Order> myOrders = new ArrayList<>();
+    public static List<Order> myOrders = new ArrayList<>();
+
+    public static List<Order> getMyList() {
+        return myOrders;
+    }
 
     public void addOrder(Order order) {
         this.myOrders.add(order);
-
     }
-    public Order showOrders(Order order) {
 
-        return null;
+    public List<Order> getOrdersFromLastTwoYears() {
+
+        List<Order> newList = Shop.getMyList()
+                .stream()
+                .filter(u -> u.getDate().isAfter(LocalDate.of(2019, 9, 29)))
+                .collect(Collectors.toList());
+
+        return newList;
     }
+
     public int getSize() {
-
         return this.myOrders.size();
+    }
+
+    public int getOrderWithHighestPrice() {
+
+        int max = Shop.getMyList()
+                .stream()
+                .map(u -> u.getPrice())
+                .mapToInt(n -> n)
+                .max()
+                .getAsInt();
+
+        return max;
+    }
+    public int getOrderWithTheLowestPrice() {
+
+        int min = Shop.getMyList()
+                .stream()
+                .map(u -> u.getPrice())
+                .mapToInt(n -> n)
+                .min()
+                .getAsInt();
+
+        return min;
+    }
+    public int sumAllOrderPrices() {
+
+        int sum = Shop.getMyList()
+                .stream()
+                .map(u -> u.getPrice())
+                .mapToInt(n -> n)
+                .sum();
+
+        return sum;
+
+    }
+    public List<Order> showOrdersWithDefinedPrices(int from, int to) {
+
+        List<Order> newList = Shop.getMyList()
+                .stream()
+                .filter(u -> u.getPrice() > from)
+                .filter(u -> u.getPrice() < to)
+                .collect(Collectors.toList());
+        System.out.println(newList);
+
+        return newList;
     }
 }

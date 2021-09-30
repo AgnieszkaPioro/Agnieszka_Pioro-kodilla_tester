@@ -24,66 +24,38 @@ public class InvoiceTestSuite {
     @Test
 
     public void shouldAddItemsToInvoice() {
-
-
         //when
-
         int numberOfItems = invoice.getSize();
-
         //then
         assertEquals(3, numberOfItems);
     }
-
     @Test
     public void shouldShowRightNameAndPrice() {
-
-
         //when
-
         Item testItem = invoice.getItem(1);
-
         //then
         assertEquals("cheese", testItem.getName());
         assertEquals(14, testItem.getPrice());
-
     }
-
     @Test
     public void shouldShowNullItem() {
-
-
         //when
-
         Item nullItem = invoice.getItem(-1);
-
         //then
-
         assertNull(nullItem);
-
     }
     @Test
     public void shouldShowNullItemBigIndex() {
-
-
         //when
-
         Item nullItem = invoice.getItem(9);
-
         //then
-
         assertNull(nullItem);
     }
-
     @Test
     public void shouldCleanInvoice() {
-
-
         //when
-
         invoice.clear();
-
         //then
-
         assertEquals(0, invoice.getSize());
     }
     @BeforeEach
@@ -100,6 +72,5 @@ public class InvoiceTestSuite {
     public static void displayGoodByeMessage() {
         System.out.println("Finishing testing");
     }
-
 
 }
