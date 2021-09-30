@@ -1,5 +1,6 @@
 package com.kodilla.execution_model.homework;
 
+import net.bytebuddy.asm.Advice;
 import org.junit.jupiter.api.*;
 import org.mockito.internal.matchers.Or;
 
@@ -29,13 +30,15 @@ public class ShopTestSuite {
     }
 
     @Test
-    public void shouldShowOrdersFromLastTwoYears() {
+    public void shouldShowOrdersFromDefinedDates() {
         //given
         List<Order> expectedList = new ArrayList<>();
         expectedList.add(fruits);
         expectedList.add(games);
+        LocalDate startDate = LocalDate.of(2019,9,29);
+        LocalDate lastDate = LocalDate.of(2021,9,29);
         //when
-        List<Order> ordersFromTwoYears = shop.getOrdersFromLastTwoYears();
+        List<Order> ordersFromTwoYears = shop.getOrdersFromDefinedDates(startDate, lastDate);
         //then
         assertEquals(expectedList, ordersFromTwoYears);
     }

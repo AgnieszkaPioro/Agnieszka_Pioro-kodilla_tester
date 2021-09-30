@@ -5,13 +5,11 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.HashSet;
 import java.util.Set;
 
-public class GamblingMachineTestSuite {
+//public class GamblingMachineTestSuite {
 
-    private GamblingMachine gamblingMachine = new GamblingMachine();
-
+//    private GamblingMachine gamblingMachine = new GamblingMachine();
 
 
 //    @ParameterizedTest
@@ -19,10 +17,10 @@ public class GamblingMachineTestSuite {
 //
 //    public void shouldCountWins(String input) throws InvalidNumbersException {
 //        System.out.println(input);
-//        int wins = gamblingMachine.howManyWins(input);
-//        System.out.println(wins);
+//        int wins = gamblingMachine.howManyWins(input) ;
 //        boolean isWin = false;
 //        if
+//
 //        assertTrue (isWin);
 //    }
-}
+//}

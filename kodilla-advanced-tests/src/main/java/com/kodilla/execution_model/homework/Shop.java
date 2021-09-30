@@ -22,11 +22,12 @@ public class Shop {
         this.myOrders.add(order);
     }
 
-    public List<Order> getOrdersFromLastTwoYears() {
+    public List<Order> getOrdersFromDefinedDates(LocalDate startDate, LocalDate lastDate) {
 
         List<Order> newList = Shop.getMyList()
                 .stream()
-                .filter(u -> u.getDate().isAfter(LocalDate.of(2019, 9, 29)))
+                .filter(u -> u.getDate().isAfter(startDate))
+                .filter(u -> u.getDate().isBefore(lastDate))
                 .collect(Collectors.toList());
 
         return newList;
