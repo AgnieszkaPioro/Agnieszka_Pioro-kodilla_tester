@@ -17,4 +17,6 @@ public class EBayTestingApp {
         WebElement clickField = driver.findElement(By.id("gh-btn"));
         clickField.click();
     }
+
+//    https://github.com/AgnieszkaPioro/Agnieszka_Pioro-kodilla_tester.git
 }
