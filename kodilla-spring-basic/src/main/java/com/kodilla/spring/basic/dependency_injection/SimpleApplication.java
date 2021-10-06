@@ -13,10 +13,8 @@ public class SimpleApplication {
             this.messageService.send(message, receiver);
         }
     }
+
     private boolean checkReceiver(String receiver) {
         return receiver != null && !receiver.isEmpty();
     }
-
-
-
 }
