@@ -1,5 +1,8 @@
 package com.kodilla.spring.basic.dependency_injection;
 
+import org.springframework.stereotype.Component;
+
+
 public class TextMessageService implements MessageService {
     @Override
     public void send(String message, String receiver) {
