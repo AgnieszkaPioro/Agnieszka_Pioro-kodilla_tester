@@ -6,7 +6,7 @@ import com.kodilla.mockito.notification.NotificationService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class NotificationServiceTestSuite {
+public class NotificationCracowServiceTestSuite {
 
 
     NotificationService notificationService = new NotificationService();

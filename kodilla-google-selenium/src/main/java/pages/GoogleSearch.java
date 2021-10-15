@@ -48,7 +48,6 @@ public class GoogleSearch extends AbstractPage {
         wait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         webElement.click();
     }
-
     public GoogleResults loadResults(WebDriver driver) {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);

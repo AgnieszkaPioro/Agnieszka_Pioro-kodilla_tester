@@ -18,9 +18,6 @@ public class GoogleResults extends AbstractPage{
         PageFactory.initElements(this.driver, this);  // [5]
     }
 
-
-
-
     public void isSeeResults() {
         System.out.println("I see results");
         System.out.println(results.size());

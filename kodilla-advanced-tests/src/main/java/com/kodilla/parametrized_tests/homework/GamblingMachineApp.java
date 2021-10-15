@@ -15,9 +15,7 @@ public class GamblingMachineApp {
         myNumbers.add(41);
         myNumbers.add(44);
 
-
-
-        System.out.println(myNumbers.size());
+        System.out.println(myNumbers);
 
         GamblingMachine gamblingMachine = new GamblingMachine();
         try {
