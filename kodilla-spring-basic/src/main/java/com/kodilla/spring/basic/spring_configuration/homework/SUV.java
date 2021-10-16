@@ -1,5 +1,7 @@
 package com.kodilla.spring.basic.spring_configuration.homework;
 
+import org.springframework.stereotype.Component;
+
 import java.time.LocalTime;
 
 public class SUV implements Car {
@@ -9,20 +11,28 @@ public class SUV implements Car {
 
 
     @Override
-    public boolean hasHeadlightsTurnedOn(String season, LocalTime time) {
+    public boolean hasHeadlightsTurnedOn(LocalTime time) {
 
-        if (time.isAfter(time2) & time.isBefore(time3)) {
-            System.out.println("Cabrio lights turn on");
+        if (time.isAfter(time3) & time.isBefore(time2)) {
+            System.out.println("Its not time to turn SUV lights on...");
             return true;
         }
-        System.out.println("Its not time to turn lights on...");
+        System.out.println("SUV lights turn on");
         return false;
     }
 
     @Override
-    public String getCarType(String season, LocalTime time) {
+    public String getCarType() {
 
-        return " ";
+        return "SUV";
+    }
+
+    @Override
+    public String toString() {
+        return "SUV{" +
+                "time2=" + time2 +
+                ", time3=" + time3 +
+                '}';
     }
 }
 
