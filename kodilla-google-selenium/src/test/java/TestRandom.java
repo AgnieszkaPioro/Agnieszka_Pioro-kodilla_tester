@@ -18,8 +18,10 @@
 //        driver = new FirefoxDriver();
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        driver.navigate().to("http://www.google.com");
-//        WebElement acceptField = driver.findElement(By.id("L2AGLb"));
-//        acceptField.click();
+////        driver.switchTo().frame(driver.findElement(By.id("L2AGLb")));
+////        driver.findElement(By.id("L2AGLb")).click();
+////        WebElement acceptField = driver.findElement(By.id("L2AGLb"));
+////        acceptField.click();
 //    }
 //
 //    @After

@@ -1,4 +1,5 @@
 package com.kodilla.rest.service;
+
 import com.kodilla.rest.domain.BookDto;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,10 @@ public class BookService {
     public void addBook(BookDto bookDto) {
         books.add(bookDto);
     }
-    public void remove(BookDto bookDto) {
+    public void removeBook(BookDto bookDto) {
         books.remove(bookDto);
+    }
+    public void removeBookByIndex(int index) {
+        books.remove(index);
     }
 }

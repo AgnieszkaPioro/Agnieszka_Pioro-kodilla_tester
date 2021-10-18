@@ -55,4 +55,6 @@ public class GoogleSearch extends AbstractPage {
         GoogleResults googleResults = new GoogleResults(driver);
         return googleResults;
     }
+
+
 }
