@@ -31,8 +31,4 @@ public class BookController {
     public void removeBook(@RequestBody BookDto bookDto) {
         bookService.removeBook(bookDto);
     }
-    @DeleteMapping(value = "/index")
-    public void removeBookByIndex(@PathVariable int index ) {
-        bookService.removeBookByIndex(index);
-    }
 }
