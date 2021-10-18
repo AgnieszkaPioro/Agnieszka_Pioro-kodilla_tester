@@ -1,4 +1,4 @@
 package com.kodilla.mockito.notification.homework;
 
-public interface NotificationWroclaw {
+public interface NotificationAlert {
 }
