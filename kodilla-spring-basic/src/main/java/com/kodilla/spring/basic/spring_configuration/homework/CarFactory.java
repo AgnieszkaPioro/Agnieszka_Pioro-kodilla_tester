@@ -8,39 +8,40 @@ import java.time.LocalTime;
 @Configuration
 public class CarFactory {
 
+    String choosenSeason;
+
     @Bean
     public Cabrio createCabrio() {
         return new Cabrio();
     }
-
+    @Bean
     public Sedan createSedan() {
         return new Sedan();
     }
-
+    @Bean
     public SUV createSUV() {
         return new SUV();
     }
-
-    public Car createNewCar(String season) {
+    @Bean
+    public Car createNewCar() {
 
         Car car;
-        String choosenSeason = season;
+
         if (choosenSeason == "summer") {
-            car = createCabrio();
-            System.out.println("A car was created " + car);
+            car = new Cabrio();
+//            System.out.println("A car was created " + car);
         }
         else if (choosenSeason == "spring") {
             car = new Sedan();
-            System.out.println("A car was created " + car);
+//            System.out.println("A car was created " + car);
         }
         else if (choosenSeason == "fall") {
             car = new Sedan();
-            System.out.println("A car was created " + car);
+//            System.out.println("A car was created " + car);
         }
         else
             car = new SUV();
-            System.out.println("A car was created " + createSUV());
 
-        return createSUV();
+        return car;
     }
 }
