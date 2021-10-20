@@ -1,44 +1,58 @@
 package com.kodilla.mockito.notification.homework;
-
 import java.util.*;
 
 public class WeatherAlertService {
 
-    Map<MyClient, Cities> alertSystem = new HashMap<>();
+
+    private Map<MyClient, List<Cities>> alertSystem = new HashMap<>();
+
 
     public void addSubscriber(MyClient myClient, Cities cities) {
-        for (Map.Entry<MyClient, Cities> myClientEntry : alertSystem.entrySet()) {
-            if (myClientEntry.getKey().equals(myClient)) {
-                myClientEntry.getKey().addCities(cities);
-            }
-        }
-        alertSystem.put(myClient, cities);
-    }
 
+        List<Cities> citiesList = new ArrayList<>();
+
+        if (this.alertSystem.containsKey(myClient)) {
+            alertSystem.get(myClient).add(cities);
+        } else {
+            citiesList.add(cities);
+            alertSystem.put(myClient, citiesList);
+        }
+    }
     public void removeSubscriber(MyClient myClient, Cities cities) {
-        for (Map.Entry<MyClient, Cities> myClientEntry : alertSystem.entrySet()) {
-            if (myClientEntry.getKey().equals(myClient)) {
-                myClientEntry.getKey().removeCities(cities);
+
+        List<Cities> citiesList = alertSystem.get(myClient);
+        if (citiesList != null) {
+            citiesList.remove(cities);
+            if (citiesList.isEmpty()) {
+                alertSystem.remove(myClient);
             }
         }
-        alertSystem.remove(myClient);
+
+
+//        for (Map.Entry<MyClient, List<Cities>> myClientEntry : alertSystem.entrySet()) {
+//            if (myClientEntry.getKey().equals(myClient)) {
+//                myClientEntry.getValue().remove(cities);
+//            } if (myClientEntry.getValue().isEmpty()) {
+//                alertSystem.remove(myClient);
+//            }
+//        }
     }
+    public void sendNotification(Cities cities) {
 
-    public void sendNotification(WeatherNotification weatherNotification) {
-            this.alertSystem.forEach((myClient, cities) -> myClient.receive(weatherNotification));
-
+        alertSystem.entrySet()
+                .stream()
+                .filter(n -> n.getValue().contains(cities))
+                .forEach(n -> n.getKey().receive(cities));
     }
-
     public void sendNotificationAlertToAllSubscribers(NotificationAlert notificationAlert) {
-        this.alertSystem.forEach(((myClient, cities) -> myClient.receiveNotificationAlert(notificationAlert)));
-    }
+        alertSystem.entrySet()
+                .stream()
+                .forEach(n -> n.getKey().receiveNotificationAlert(notificationAlert));
+        }
 
     public void removeCity(Cities cities) {
-        for (Map.Entry<MyClient, Cities> myCitiesEntry : alertSystem.entrySet()) {
-            if (myCitiesEntry.getValue().equals(cities)) {
-                myCitiesEntry.getValue().removeCities();
-            }
-        }
-        alertSystem.remove(cities);
+//      this.citiesList.remove(cities);
+        this.alertSystem.remove(cities);
     }
 }
+
