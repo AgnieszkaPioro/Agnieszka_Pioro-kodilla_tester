@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.Random;
 
 public class GoogleResults extends AbstractPage{
 
@@ -17,9 +18,16 @@ public class GoogleResults extends AbstractPage{
         super(driver);                                // [4]
         PageFactory.initElements(this.driver, this);  // [5]
     }
-
     public void isSeeResults() {
         System.out.println("I see results");
         System.out.println(results.size());
+    }
+    public WebElement randomResult(){
+        Random random = new Random();
+        int randomSearch = random.nextInt(results.size());
+        WebElement webElement = results.get(randomSearch);
+        webElement.getTagName();
+        return results.get(randomSearch);
+
     }
 }
