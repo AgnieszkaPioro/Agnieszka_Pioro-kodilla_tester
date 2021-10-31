@@ -3,6 +3,7 @@ Feature: Cash Withdrawal
     Given I have deposited $200 in my wallet
     When I request $30
     Then $30 should be dispensed
+    And the balance of my wallet should be $170
 
   Scenario: Unsuccesful withdrawal from a wallet credit
     Given I have deposited $100 in my wallet
@@ -13,3 +14,4 @@ Feature: Cash Withdrawal
     Given I have deposited $100 in my wallet
     When I don't have withdrawal
     Then $0 should be dispensed
+

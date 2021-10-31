@@ -13,10 +13,10 @@ public class Cashier {
 
         if (wallet.getBalance() >= amount) {
             cashSlot.dispense(amount);
+            wallet.debit(amount);
         }
         else {
             System.out.println("There is not enough money on your account");
-
         }
     }
 }
