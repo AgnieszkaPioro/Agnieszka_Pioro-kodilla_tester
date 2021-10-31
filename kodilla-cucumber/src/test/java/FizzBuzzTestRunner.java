@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/fizzbuzzchecker"}
+        features = {"src/test/resources/wallet"}
 )
 
 public class FizzBuzzTestRunner {
