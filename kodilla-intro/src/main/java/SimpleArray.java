@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SimpleArray {
     public static void main(String[] args) {
         String[] animals = new String[5];
@@ -6,8 +8,9 @@ public class SimpleArray {
         animals[2] = "krowa";
         animals[3] = "hipopotam";
         animals[4] = "kogut";
+        animals[4] = "kogut5";
 
-        String animal = animals[3];
+        String animal = animals[4];
         System.out.println(animal);
 
         int numberOfElements = animals.length;

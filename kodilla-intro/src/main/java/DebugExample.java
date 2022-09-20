@@ -1,7 +1,7 @@
 public class DebugExample {
     public static void main(String[] args) {
         int firstNumber = 22;
-        int secondNumber = 11;
+        int secondNumber = 111;
 
         System.out.println(firstNumber);
         System.out.println(secondNumber);

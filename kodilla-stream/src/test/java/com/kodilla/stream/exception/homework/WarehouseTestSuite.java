@@ -10,10 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WarehouseTestSuite {
 
+    Warehouse warehouse = new Warehouse();
+
     @Test
     public void testGetOrder() throws OrderDoesntExistException {
         //given
-        Warehouse warehouse = new Warehouse();
+        //Warehouse warehouse = new Warehouse();
         warehouse.addOrder(new Order("25"));
         warehouse.addOrder(new Order("16"));
         warehouse.addOrder(new Order("43"));
@@ -29,7 +31,7 @@ class WarehouseTestSuite {
     public void testGetOrder_withException() {
 
         //given
-        Warehouse warehouse = new Warehouse();
+        //Warehouse warehouse = new Warehouse();
         warehouse.addOrder(new Order("25"));
         warehouse.addOrder(new Order("16"));
         warehouse.addOrder(new Order("43"));
